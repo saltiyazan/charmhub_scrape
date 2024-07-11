@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charmhub Data Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; /* Align children (table and summary) vertically */
+            align-items: center; /* Center-align the children horizontally */
+            justify-content: center; /* Center vertically on the page */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+        }
+
+        .table-wrapper {
+            width: 80%;
+            height: 70%; /* Adjust height to leave space for summary */
+            overflow: auto;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Space between the table and the summary */
+        }
+
+        #summary {
+            width: 80%; /* Match the width of the table-wrapper */
+            text-align: center;
+            padding: 10px 0; /* Padding for better spacing */
+            font-size: 1.1em; /* Slightly larger text */
+        }
+
+        .table {
+            display: table;
+            /* Changed from flex to table display */
+            width: 100%;
+            /* Ensures the table uses all available space */
+            border-collapse: collapse;
+            /* Ensures no double borders */
+        }
+
+        .row {
+            display: table-row;
+        }
+
+        .header {
+            font-weight: bold;
+            background-color: #f4f4f4;
+        }
+
+        .cell {
+            display: table-cell;
+            /* Each cell behaves like a table cell */
+            padding: 8px;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+            /* Aligns text to the left */
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table-wrapper">
+        <div class="table" id="data-table">
+            <!-- Table will be dynamically generated here -->
+        </div>
+    </div>
+    <div id="summary" style="text-align: center; margin-top: 20px;">
+        <!-- Summary information will be displayed here -->
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
